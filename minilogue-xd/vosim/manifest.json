@@ -1,0 +1,18 @@
+{
+    "header" : 
+    {
+        "platform" : "minilogue-xd",
+        "module" : "osc",
+        "api" : "1.1-0",
+        "dev_id" : 0,
+        "prg_id" : 0,
+        "version" : "0.99-0",
+        "name" : "VOSIM",
+        "num_param" : 3,
+        "params" : [
+            ["Freq",           2, 20, ""],
+            ["NP",             1, 20, ""],
+            ["LFO Target",     0, 1, ""]
+        ]
+    }
+}
