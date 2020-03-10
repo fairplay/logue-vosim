@@ -39,8 +39,7 @@ Done
 | N | param2 | number of pulses per period |
 | LFO Target | param3 | LFO Target: 1 means delay, 2 means attenuation |
 
-## Disclaimer
 
-Code contains some magic numbers, but the meaning of them should be clear.
+## Binaries
 
-Only NTS-1 module is tested, please confirm if it works for other platforms
+Binaries are here: https://tyrannosaurus.ru/posts/2020-03-10-logue-vosim.html
