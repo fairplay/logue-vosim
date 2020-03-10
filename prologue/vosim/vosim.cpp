@@ -14,7 +14,7 @@ typedef struct State {
   float phase;
   float M; // M
   float b; // Attenuation constant
-  uint16_t NP; // Number of periods
+  uint16_t N; // Number of pulses per period
   uint16_t Freq; // Freq is proportional to 1/T (where T is pulsewidth it terms of Kaegi's paper)
   uint16_t lfo_target;
   float lfo, lfoz;
@@ -40,7 +40,7 @@ void OSC_INIT(uint32_t platform, uint32_t api)
   s.M = 0.2f;
   s.b = 0.8f;
   s.Freq = 8;
-  s.NP = 6;
+  s.N = 6;
   s.lfo = s.lfoz = 0.f;
   s.flags = k_flags_none;
 }
@@ -57,7 +57,7 @@ void OSC_CYCLE(const user_osc_param_t * const params,
 
   const float M = s.M;
   const float b = s.b;
-  const uint16_t NP = s.NP;
+  const uint16_t N = s.N;
   const uint16_t Freq = s.Freq;
 
   const float lfo = s.lfo = q31_to_f32(params->shape_lfo);
@@ -99,7 +99,7 @@ void OSC_CYCLE(const user_osc_param_t * const params,
         out *= out;
 
         for (uint16_t i = 0; i < period_number; i++) {
-            out = i < NP - 1 ? out * atten : 0;
+            out = i < N - 1 ? out * atten : 0;
         }
     }
 
@@ -134,7 +134,7 @@ void OSC_PARAM(uint16_t index, uint16_t value)
   case k_user_osc_param_id1:
     s.Freq = value;
   case k_user_osc_param_id2:
-    s.NP = value;
+    s.N = value;
   case k_user_osc_param_id3:
     s.lfo_target = value;
   case k_user_osc_param_id4:

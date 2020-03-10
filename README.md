@@ -36,7 +36,7 @@ Done
 | M | shape | delay |
 | b | shift-shape | attenuation |
 | Freq | param1 | reciprocal of pulse T |
-| NP | param2 | number of periods |
+| N | param2 | number of pulses per period |
 | LFO Target | param3 | LFO Target: 1 means delay, 2 means attenuation |
 
 ## Disclaimer
