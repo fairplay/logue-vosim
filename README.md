@@ -40,4 +40,7 @@ Done
 | LFO Target | param3 | LFO Target: 1 means delay, 2 means attenuation |
 
 ## Disclaimer
+
+Code contains some magic numbers, but the meaning of them should be clear.
+
 Only NTS-1 module is tested, please confirm if it works for other platforms
