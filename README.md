@@ -3,8 +3,8 @@ VOSIM oscillator for logue SDK (see https://www.kaegi.nl/werner/userfiles/downlo
 
 ## Build instructions
 
-1. Copy repository content to directory `<your cloned logue-sdk location>/platform`
-    - Ensure that `minilogue-xd`, `nutekt-digital`, `prologue` directories contains `vosim` directory
+1. Copy directories `minilogue-xd/`, `nutekt-digital/`, `prologue/` from repository to directory `<your cloned logue-sdk location>/platform`
+    - Ensure that `minilogue-xd/`, `nutekt-digital/`, `prologue/` directories contains `vosim` directory
 2. Go to needed platform directory and build oscillator using `make`
 3. Upload resulting module to device
 
